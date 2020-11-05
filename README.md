@@ -1,19 +1,21 @@
 # YAPF Python Code Formatting Check
 
-[![GitHub issues](https://img.shields.io/github/issues/AlexanderMelde/yapf-action?style=flat-square)](https://github.com/AlexanderMelde/yapf-action/issues) [![GitHub license](https://img.shields.io/github/license/AlexanderMelde/yapf-action?style=flat-square)](https://github.com/AlexanderMelde/yapf-action/blob/master/LICENSE) [![Winner Of The GitHub Actions Hackathon](https://img.shields.io/badge/GitHub%20Actions%20Hackathon-Winner!-blue?style=flat-square&logo=github-actions&logoColor=9cf)](https://docs.google.com/spreadsheets/d/1YL6mjJXGt3-75GejQCubsOvWwtYcGaqbJA7msnsh7Tg/edit?usp=sharing) [![GitHub stars](https://img.shields.io/github/stars/AlexanderMelde/yapf-action?style=flat-square)](https://github.com/AlexanderMelde/yapf-action/stargazers)
+[![GitHub issues](https://img.shields.io/github/issues/CrunchMind/yapf-action?style=flat-square)](https://github.com/CrunchMind/yapf-action/issues) [![GitHub license](https://img.shields.io/github/license/CrunchMind/yapf-action?style=flat-square)](https://github.com/CrunchMind/yapf-action/blob/master/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/CrunchMind/yapf-action?style=flat-square)](https://github.com/CrunchMind/yapf-action/stargazers)
 
 A GitHub action that runs [YAPF](https://github.com/google/yapf) to test if your python code is correctly formatted.
 
 Once Configured, your action workflow will succeed only if your code is formatted in YAPF style.
 
 The action uses the `--diff` parameter of YAPF in order to return:
+
 - SUCCESS: exit-code=zero → no changes were necessary, code is YAPF-formatted
 - FAIL: exit-code=non-zero → not correctly formatted or program error
 
 ## Usage
+
 To use this action in your repository, create a file like `.github/workflows/yapf_check.yml` with the following content:
 
-```
+```yml
 name: YAPF Formatting Check
 on: [push]
 jobs:
@@ -23,7 +25,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: run YAPF to test if python code is correctly formatted
-      uses: AlexanderMelde/yapf-action@master
+      uses: CrunchMind/yapf-action@master
       with:
         args: --verbose
 ```

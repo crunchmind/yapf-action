@@ -1,4 +1,4 @@
-FROM 422947892584.dkr.ecr.us-east-1.amazonaws.com/yapf-action
+FROM 422947892584.dkr.ecr.us-east-1.amazonaws.com/yapf-action:v1
 
 LABEL "com.github.actions.name"="YAPF Python Code Formatting Check"
 LABEL "com.github.actions.description"="Run YAPF to check that your python code if correctly formatted."
